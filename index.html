@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91免费-免费资源导航_91免费入口与实用内容合集</title>
+<meta name="description" content="91免费是一个免费资源导航首页，汇集实用工具、学习资料与日常内容入口，帮助访客快速找到可直接使用的免费资源，并了解各类资源的适用范围与更新状态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial,sans-serif' font-weight='bold' text-anchor='middle' fill='%23ffffff'%3E91%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#14201f;
+    --ink-soft:#4a5b58;
+    --teal:#0f766e;
+    --teal-deep:#0b5b55;
+    --mint:#e9f5f2;
+    --sand:#f7f4ec;
+    --line:#d9e4e1;
+    --white:#ffffff;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--sand);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px;}
+
+  /* ---------- header ---------- */
+  header.site{
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  .nav-row{display:flex;align-items:center;justify-content:space-between;gap:18px;height:68px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:.5px;color:var(--teal-deep);}
+  .brand .mark{
+    width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--teal),#14b8a6);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;letter-spacing:0;
+  }
+  nav.main ul{display:flex;gap:26px;list-style:none;font-size:15px;color:var(--ink-soft);}
+  nav.main a{padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
+  nav.main a:hover{color:var(--teal-deep);border-bottom-color:var(--teal);}
+  .nav-cta{
+    background:var(--teal);color:#fff;font-size:14px;padding:9px 18px;border-radius:999px;
+    white-space:nowrap;transition:.2s;
+  }
+  .nav-cta:hover{background:var(--teal-deep);}
+  @media (max-width:860px){
+    nav.main{display:none;}
+    .nav-row{height:62px;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 88% 12%,rgba(20,184,166,.16),transparent 52%),
+      linear-gradient(180deg,#ffffff 0%,#f2faf7 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:64px 0 58px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--teal-deep);
+    background:var(--mint);border:1px solid #cfe8e2;border-radius:999px;padding:5px 14px;margin-bottom:18px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);}
+  h1{
+    font-size:clamp(32px,4.4vw,46px);
+    line-height:1.22;
+    letter-spacing:.5px;
+    color:var(--teal-deep);
+    font-weight:800;
+  }
+  .hero p.lead{margin-top:18px;font-size:16.5px;color:var(--ink-soft);max-width:34em;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+  .btn{
+    display:inline-block;padding:12px 24px;border-radius:999px;font-size:15px;font-weight:600;transition:.2s;
+  }
+  .btn-primary{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(15,118,110,.22);}
+  .btn-primary:hover{background:var(--teal-deep);}
+  .btn-ghost{background:#fff;color:var(--teal-deep);border:1px solid #bfdcd6;}
+  .btn-ghost:hover{border-color:var(--teal);}
+  .hero-figure{
+    background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;
+    box-shadow:0 18px 40px -28px rgba(15,118,110,.55);
+  }
+  .hero-figure .fig-title{font-size:13px;color:var(--ink-soft);letter-spacing:.5px;margin-bottom:14px;}
+  .fig-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+  .fig-list li{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--ink);}
+  .fig-list .ico{
+    width:30px;height:30px;flex:0 0 30px;border-radius:8px;background:var(--mint);
+    display:flex;align-items:center;justify-content:center;color:var(--teal-deep);
+  }
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;gap:30px;padding:40px 0 38px;}
+    .hero-figure{order:2;}
+  }
+
+  /* ---------- section base ---------- */
+  section{padding:62px 0;}
+  .sec-head{margin-bottom:30px;}
+  .sec-head .kicker{font-size:13px;letter-spacing:2px;color:var(--teal);font-weight:700;text-transform:uppercase;}
+  .sec-head h2{font-size:clamp(22px,2.6vw,28px);color:var(--ink);margin-top:6px;font-weight:750;}
+  .sec-head p{margin-top:10px;color:var(--ink-soft);font-size:15px;max-width:46em;}
+
+  /* ---------- quick filter ---------- */
+  .filter-bar{
+    display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;
+  }
+  .chip{
+    border:1px solid #c9dfd9;background:#fff;color:var(--ink-soft);
+    padding:7px 16px;border-radius:999px;font-size:14px;cursor:pointer;transition:.18s;
+  }
+  .chip:hover{border-color:var(--teal);color:var(--teal-deep);}
+  .chip.active{background:var(--teal);border-color:var(--teal);color:#fff;}
+
+  /* ---------- resource cards ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 20px;display:flex;flex-direction:column;gap:10px;transition:.2s;
+  }
+  .card:hover{border-color:#a9d4cb;box-shadow:0 14px 30px -24px rgba(15,118,110,.7);transform:translateY(-2px);}
+  .card .tag{
+    align-self:flex-start;font-size:12px;color:var(--teal-deep);background:var(--mint);
+    border-radius:6px;padding:2px 9px;letter-spacing:.5px;
+  }
+  .card h3{font-size:17px;font-weight:700;color:var(--ink);}
+  .card p{font-size:14px;color:var(--ink-soft);flex:1;}
+  .card .meta{font-size:12.5px;color:#7b8c89;border-top:1px dashed var(--line);padding-top:10px;}
+  .card[data-hidden="true"]{display:none;}
+  @media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.cards{grid-template-columns:1fr;}}
+
+  /* ---------- intro block ---------- */
+  .intro-block{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;}
+  .intro-text h2{font-size:clamp(21px,2.4vw,26px);font-weight:750;margin-bottom:16px;}
+  .intro-text p{font-size:15.5px;color:var(--ink-soft);margin-bottom:14px;}
+  .intro-text strong{color:var(--teal-deep);font-weight:700;}
+  .facts{list-style:none;display:flex;flex-direction:column;gap:14px;}
+  .facts li{
+    background:var(--sand);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;
+    padding:14px 16px;font-size:14px;color:var(--ink-soft);
+  }
+  .facts li b{display:block;color:var(--ink);font-size:14.5px;margin-bottom:3px;}
+  @media (max-width:860px){.intro-grid{grid-template-columns:1fr;gap:26px;}}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step;}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+    position:relative;
+  }
+  .step::before{
+    counter-increment:step;content:"0" counter(step);
+    font-size:13px;font-weight:700;color:var(--teal);letter-spacing:1px;display:block;margin-bottom:10px;
+  }
+  .step h3{font-size:16.5px;font-weight:700;margin-bottom:8px;}
+  .step p{font-size:14px;color:var(--ink-soft);}
+  @media (max-width:860px){.steps{grid-template-columns:1fr;}}
+
+  /* ---------- faq ---------- */
+  .faq{display:flex;flex-direction:column;gap:12px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;
+  }
+  details[open]{border-color:#a9d4cb;}
+  summary{
+    cursor:pointer;font-size:15.5px;font-weight:600;color:var(--ink);list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:18px;color:var(--teal);font-weight:400;}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- download strip ---------- */
+  .cta-strip{
+    background:linear-gradient(135deg,var(--teal-deep),#12897f);
+    border-radius:20px;padding:38px 34px;color:#fff;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
+  }
+  .cta-strip h2{font-size:clamp(20px,2.4vw,25px);font-weight:750;}
+  .cta-strip p{font-size:14.5px;opacity:.88;margin-top:6px;max-width:34em;}
+  .btn-download{
+    display:inline-block;background:#fff;color:var(--teal-deep);font-weight:700;font-size:15px;
+    padding:13px 30px;border-radius:999px;pointer-events:none;opacity:.92;
+  }
+
+  /* ---------- footer ---------- */
+  footer.site{background:#0e2321;color:#c7d8d4;padding:44px 0 30px;font-size:14px;}
+  .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12);}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:#fff;}
+  .foot-brand .mark{
+    width:30px;height:30px;border-radius:8px;background:#14b8a6;
+    display:flex;align-items:center;justify-content:center;font-size:12px;color:#06231f;font-weight:700;
+  }
+  .foot-links{display:flex;flex-wrap:wrap;gap:24px;list-style:none;font-size:14px;}
+  .foot-links a:hover{color:#fff;}
+  .foot-bottom{padding-top:20px;font-size:13px;color:#8fa8a3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;}
+
+  @media (max-width:560px){
+    section{padding:46px 0;}
+    .hero-actions .btn{width:100%;text-align:center;}
+    .cta-strip{padding:28px 22px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">91</span>
+      <span>91免费</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <ul>
+        <li><a href="#resources">资源分类</a></li>
+        <li><a href="#about">站点说明</a></li>
+        <li><a href="#steps">使用路径</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#resources">浏览资源</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>免费资源导航 · 首页</span>
+        <h1>91免费</h1>
+        <p class="lead">91免费把散落在各处、可直接使用的免费资源整理成一页导航。你可以按工具、学习、影音、生活四个方向浏览，先看清每项资源的用途和适用范围，再决定是否打开。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#resources">进入资源分类</a>
+          <a class="btn btn-ghost" href="#about">了解收录标准</a>
+        </div>
+      </div>
+      <aside class="hero-figure" aria-label="资源概览">
+        <p class="fig-title">首页收录方向</p>
+        <ul class="fig-list">
+          <li>
+            <span class="ico" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 3l7 7-9 9H5v-7z"/></svg>
+            </span>
+            实用工具：转换、压缩、格式处理
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16v12H4z"/><path d="M8 21h8"/></svg>
+            </span>
+            学习资料：公开课程与文档合集
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18V6l10-2v12"/><circle cx="6" cy="18" r="3"/><circle cx="19" cy="16" r="3"/></svg>
+            </span>
+            影音内容：可公开播放的素材
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"/><path d="M12 3v18"/></svg>
+            </span>
+            生活服务：查询与日常小工具
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Resources</span>
+        <h2>资源分类</h2>
+        <p>点击下方标签可按方向筛选。每张卡片写明资源用途与当前状态，91免费只做入口归纳，不代管资源本身。</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="资源筛选">
+        <button class="chip active" type="button" data-filter="all">全部</button>
+        <button class="chip" type="button" data-filter="tool">实用工具</button>
+        <button class="chip" type="button" data-filter="study">学习资料</button>
+        <button class="chip" type="button" data-filter="media">影音内容</button>
+        <button class="chip" type="button" data-filter="life">生活服务</button>
+      </div>
+
+      <div class="cards" id="cardGrid">
+        <article class="card" data-cat="tool">
+          <span class="tag">实用工具</span>
+          <h3>图片格式转换</h3>
+          <p>支持常见图片格式互转，处理在浏览器本地完成，适合临时处理单张或少量图片。</p>
+          <div class="meta">状态：可访问 · 无需注册</div>
+        </article>
+        <article class="card" data-cat="tool">
+          <span class="tag">实用工具</span>
+          <h3>文本压缩与整理</h3>
+          <p>用于去除多余空行与空格，整理粘贴来的长文本，输出结果可直接复制。</p>
+          <div class="meta">状态：可访问 · 结果本地生成</div>
+        </article>
+        <article class="card" data-cat="study">
+          <span class="tag">学习资料</span>
+          <h3>公开课程索引</h3>
+          <p>按学科归纳可公开访问的课程页面，包含入门与进阶两类，适合自学规划。</p>
+          <div class="meta">状态：可访问 · 内容由来源方维护</div>
+        </article>
+        <article class="card" data-cat="study">
+          <span class="tag">学习资料</span>
+          <h3>文档与手册合集</h3>
+          <p>常见软件与开发工具的官方文档入口，便于查找版本说明与使用条款。</p>
+          <div class="meta">状态：可访问 · 以官方页面为准</div>
+        </article>
+        <article class="card" data-cat="media">
+          <span class="tag">影音内容</span>
+          <h3>可公开播放的素材</h3>
+          <p>整理标注了授权范围的音视频素材页，使用前请阅读页面上的授权说明。</p>
+          <div class="meta">状态：部分可用 · 授权各异</div>
+        </article>
+        <article class="card" data-cat="life">
+          <span class="tag">生活服务</span>
+          <h3>日常查询小工具</h3>
+          <p>包含单位换算、日期计算等轻量查询，打开即用，不保存输入内容。</p>
+          <div class="meta">状态：可访问 · 无需登录</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="intro-block">
+    <div class="wrap intro-grid">
+      <div class="intro-text">
+        <h2>91免费收录什么，不收录什么</h2>
+        <p>91免费的定位是免费资源导航，而不是资源存放地。我们只记录入口地址、用途说明和当前可见状态，不转载文件，也不提供账号或付费内容。</p>
+        <p>收录时优先选择<strong>打开即可使用</strong>的页面：无需复杂注册、主要功能不强制付费、页面说明清楚。对于需要授权才能使用的素材，会在卡片上注明授权范围，由访客自行判断是否适合使用。</p>
+        <p>资源状态会随来源方调整而变化。若某个入口长期无法打开，会从列表中移除；若功能范围改变，则同步修改卡片说明。91免费希望访客在点击之前就能大致知道会遇到什么。</p>
+      </div>
+      <ul class="facts">
+        <li><b>入口归纳</b>只整理链接与用途，不托管文件，不代收费用。</li>
+        <li><b>状态标注</b>每张卡片注明可访问情况，便于快速判断。</li>
+        <li><b>授权提示</b>素材类资源标明授权范围，使用前请核对。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">How to use</span>
+        <h2>使用路径</h2>
+        <p>从首页到具体资源只要三步，适合第一次访问的读者快速上手。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>按方向筛选</h3>
+          <p>先在资源分类里选择工具、学习、影音或生活，缩小范围，避免在无关条目上花时间。</p>
+        </div>
+        <div class="step">
+          <h3>阅读卡片说明</h3>
+          <p>查看用途、状态与授权提示，确认资源符合你的使用场景，再点击进入来源页面。</p>
+        </div>
+        <div class="step">
+          <h3>回到来源核对</h3>
+          <p>具体功能、条款与更新以来源页面为准，91免费提供的是入口与基础说明。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2>常见问题</h2>
+        <p>关于91免费的使用方式，集中回答几个高频疑问。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>91免费需要注册账号吗？</summary>
+          <p>浏览导航页与查看资源说明不需要注册。个别来源站可能要求登录，这属于来源方自身的设置，与本页无关。</p>
+        </details>
+        <details>
+          <summary>卡片上的“状态”多久更新一次？</summary>
+          <p>状态依据最近一次核对结果填写，来源方调整后可能滞后。若发现入口失效，可先换用同类条目。</p>
+        </details>
+        <details>
+          <summary>素材类资源可以直接商用吗？</summary>
+          <p>不一定。授权范围因来源而异，部分仅限个人使用。使用前请阅读来源页面的授权说明，必要时联系版权方确认。</p>
+        </details>
+        <details>
+          <summary>为什么有些资源没有收录？</summary>
+          <p>需要付费、需要复杂验证或页面说明不清的资源暂不收录。91免费优先保证入口可用与说明准确。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-strip">
+        <div>
+          <h2>把 91免费 加入你的收藏</h2>
+          <p>资源入口与说明集中在一页，下次需要时可直接回到这里，按方向筛选后使用。</p>
+        </div>
+        <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="mark" aria-hidden="true">91</span>
+        <span>91免费</span>
+      </div>
+      <ul class="foot-links">
+        <li><a href="#resources">资源分类</a></li>
+        <li><a href="#about">站点说明</a></li>
+        <li><a href="#steps">使用路径</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>91免费 · 免费资源导航首页</span>
+      <span>资源以来源页面为准，本页仅提供入口与说明。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var chips = document.querySelectorAll('.chip');
+    var cards = document.querySelectorAll('#cardGrid .card');
+    chips.forEach(function(chip){
+      chip.addEventListener('click', function(){
+        chips.forEach(function(c){ c.classList.remove('active'); });
+        chip.classList.add('active');
+        var f = chip.getAttribute('data-filter');
+        cards.forEach(function(card){
+          var show = (f === 'all' || card.getAttribute('data-cat') === f);
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
