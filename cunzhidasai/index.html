@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寸止大赛每日大赛-寸止大赛每日大赛最新_每日大赛热点合集</title>
+<meta name="description" content="寸止大赛每日大赛是每日热点内容的聚合页面，汇总寸止大赛每日大赛的最新看点、讨论焦点与话题脉络，帮助访问者快速了解当日内容走向。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff5a36'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23fff' stroke-width='4'/%3E%3Cpath d='M32 20v12l8 6' stroke='%23fff' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1c1a24;
+  --ink-soft:#4a4657;
+  --muted:#7b7689;
+  --paper:#faf7f2;
+  --card:#ffffff;
+  --line:#e8e2d8;
+  --flame:#ff5a36;
+  --flame-deep:#d63d1c;
+  --plum:#2f2547;
+  --gold:#f0b429;
+  --radius:16px;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,247,242,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;gap:26px;height:70px;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:.3px;white-space:nowrap;}
+.logo svg{width:32px;height:32px;flex:none;}
+.logo span{color:var(--plum);}
+.nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;}
+.nav a{
+  font-size:14.5px;color:var(--ink-soft);padding:8px 12px;border-radius:10px;
+  transition:background .2s,color .2s;
+}
+.nav a:hover{background:#fff0e9;color:var(--flame-deep);}
+.nav .nav-cta{background:var(--flame);color:#fff;font-weight:600;}
+.nav .nav-cta:hover{background:var(--flame-deep);color:#fff;}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:radial-gradient(120% 90% at 85% 0%,#ffe6d9 0%,#faf7f2 58%);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+  padding:64px 0 60px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--flame-deep);
+  background:#ffe9df;border:1px solid #ffd3c2;
+  padding:5px 13px;border-radius:999px;margin:0 0 18px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--flame);}
+h1{
+  font-size:clamp(30px,4.4vw,50px);
+  line-height:1.22;
+  margin:0 0 18px;
+  letter-spacing:-.5px;
+  font-weight:900;
+  color:var(--plum);
+}
+h1 em{font-style:normal;color:var(--flame);}
+.hero-lead{font-size:16.5px;color:var(--ink-soft);max-width:34em;margin:0 0 26px;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:12px;font-size:15px;font-weight:600;
+  transition:transform .15s,box-shadow .2s,background .2s;
+}
+.btn-primary{background:var(--flame);color:#fff;box-shadow:0 8px 20px -8px rgba(255,90,54,.75);}
+.btn-primary:hover{background:var(--flame-deep);transform:translateY(-1px);}
+.btn-ghost{background:#fff;color:var(--plum);border:1px solid var(--line);}
+.btn-ghost:hover{border-color:#ffc7b3;color:var(--flame-deep);}
+.hero-fact{
+  display:flex;gap:26px;margin-top:34px;flex-wrap:wrap;
+}
+.fact b{display:block;font-size:24px;color:var(--plum);line-height:1.2;}
+.fact span{font-size:13px;color:var(--muted);}
+
+.hero-art{
+  background:var(--plum);border-radius:24px;padding:26px;
+  box-shadow:0 26px 50px -26px rgba(47,37,71,.6);
+  color:#fff;position:relative;overflow:hidden;
+}
+.hero-art::after{
+  content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,90,54,.55),transparent 70%);
+  right:-70px;bottom:-90px;
+}
+.hero-art h2{font-size:14px;font-weight:600;letter-spacing:1px;color:#c9c0e0;margin:0 0 16px;}
+.tick-list{list-style:none;padding:0;margin:0;display:grid;gap:14px;position:relative;z-index:1;}
+.tick-list li{display:flex;gap:12px;font-size:14.5px;color:#efeaf7;line-height:1.6;}
+.tick-list i{
+  flex:none;width:22px;height:22px;border-radius:7px;background:rgba(255,90,54,.22);
+  color:#ff9a7c;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:700;margin-top:2px;
+}
+
+/* ---------- section basics ---------- */
+section{padding:64px 0;}
+.sec-head{margin-bottom:34px;max-width:640px;}
+.sec-kicker{
+  font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--flame-deep);
+  text-transform:uppercase;margin:0 0 10px;
+}
+.sec-title{font-size:clamp(22px,2.6vw,30px);line-height:1.3;margin:0 0 12px;color:var(--plum);font-weight:800;}
+.sec-desc{color:var(--ink-soft);font-size:15.5px;margin:0;}
+
+/* ---------- feature cards ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .18s,box-shadow .2s,border-color .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 34px -22px rgba(47,37,71,.4);border-color:#ffd3c2;}
+.card-icon{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:#fff0e9;color:var(--flame-deep);
+}
+.card-icon svg{width:22px;height:22px;}
+.card h3{margin:0;font-size:17.5px;color:var(--plum);}
+.card p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+.card .card-tag{font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);}
+
+/* ---------- timeline / daily ---------- */
+.daily{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.daily-layout{display:grid;grid-template-columns:1fr 320px;gap:44px;align-items:start;}
+.timeline{list-style:none;margin:0;padding:0;position:relative;}
+.timeline::before{
+  content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--flame),#ffe3d7);
+}
+.timeline li{position:relative;padding:0 0 26px 40px;}
+.timeline li:last-child{padding-bottom:0;}
+.timeline li::before{
+  content:"";position:absolute;left:4px;top:7px;width:16px;height:16px;border-radius:50%;
+  background:#fff;border:3px solid var(--flame);
+}
+.timeline time{display:block;font-size:12.5px;font-weight:700;color:var(--flame-deep);letter-spacing:.5px;margin-bottom:4px;}
+.timeline h4{margin:0 0 4px;font-size:16px;color:var(--plum);}
+.timeline p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+.side-box{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;position:sticky;top:90px;
+}
+.side-box h3{margin:0 0 14px;font-size:16px;color:var(--plum);}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{
+  font-size:13px;padding:6px 13px;border-radius:999px;background:#fff;
+  border:1px solid var(--line);color:var(--ink-soft);transition:.2s;
+}
+.chip:hover{border-color:var(--flame);color:var(--flame-deep);background:#fff7f3;}
+.side-note{margin:18px 0 0;font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* ---------- article block ---------- */
+.read{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+.read h2{font-size:clamp(21px,2.4vw,27px);color:var(--plum);margin:0 0 16px;line-height:1.35;}
+.read p{font-size:15.5px;color:var(--ink-soft);margin:0 0 16px;}
+.read p:last-child{margin-bottom:0;}
+.read strong{color:var(--plum);}
+.read-aside{
+  background:linear-gradient(160deg,#2f2547,#43315f);color:#e8e2f4;border-radius:20px;padding:30px;
+}
+.read-aside h3{margin:0 0 14px;font-size:17px;color:#fff;}
+.read-aside ul{margin:0;padding-left:18px;font-size:14.5px;line-height:1.9;}
+.read-aside li::marker{color:var(--gold);}
+
+/* ---------- faq ---------- */
+.faq{background:#fff;border-top:1px solid var(--line);}
+.faq-list{display:grid;gap:14px;max-width:820px;}
+details{
+  background:var(--paper);border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px;transition:border-color .2s;
+}
+details[open]{border-color:#ffc7b3;background:#fffaf7;}
+summary{
+  cursor:pointer;font-weight:700;font-size:15.5px;color:var(--plum);
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";font-size:20px;color:var(--flame);font-weight:400;line-height:1;}
+details[open] summary::after{content:"–";}
+details p{margin:12px 0 0;font-size:14.5px;color:var(--ink-soft);}
+
+/* ---------- cta ---------- */
+.cta-band{padding:0 0 72px;}
+.cta-inner{
+  background:var(--plum);border-radius:24px;padding:48px 40px;color:#fff;
+  display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;
+  position:relative;overflow:hidden;
+}
+.cta-inner::after{
+  content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,90,54,.5),transparent 70%);
+}
+.cta-inner h2{margin:0 0 8px;font-size:clamp(20px,2.4vw,26px);color:#fff;}
+.cta-inner p{margin:0;font-size:14.5px;color:#c9c0e0;max-width:36em;}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-download[aria-disabled="true"]{pointer-events:none;opacity:.9;}
+
+/* ---------- footer ---------- */
+.site-footer{background:#1c1a24;color:#a9a3b8;padding:44px 0 30px;}
+.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid #2e2a3c;}
+.footer-brand{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff;font-size:16px;}
+.footer-brand svg{width:30px;height:30px;}
+.footer-nav{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;}
+.footer-nav a:hover{color:#fff;}
+.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;padding-top:20px;color:#7b7689;}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:34px;padding:44px 0 46px;}
+  .daily-layout{grid-template-columns:1fr;gap:32px;}
+  .side-box{position:static;}
+  .read{grid-template-columns:1fr;gap:28px;}
+  .grid-3{grid-template-columns:1fr;}
+}
+@media (max-width:760px){
+  .header-inner{height:auto;padding:12px 0;flex-wrap:wrap;gap:10px;}
+  .nav{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;}
+  .nav a{white-space:nowrap;font-size:14px;padding:7px 10px;}
+  section{padding:46px 0;}
+  .hero-fact{gap:18px;}
+  .fact b{font-size:20px;}
+  .cta-inner{padding:34px 24px;}
+  .hero-art{padding:22px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="寸止大赛每日大赛首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#ff5a36"/>
+        <circle cx="32" cy="32" r="15" fill="none" stroke="#fff" stroke-width="4"/>
+        <path d="M32 20v12l8 6" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>寸止大赛每日大赛</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#today">今日看点</a>
+      <a href="#sections">栏目分区</a>
+      <a href="#daily">每日脉络</a>
+      <a href="#read">主题解读</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#today">浏览今日内容</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">每日更新 · 热点聚合</p>
+        <h1>寸止大赛每日大赛</h1>
+        <p class="hero-lead">寸止大赛每日大赛把每天流传的热点内容集中到一处：谁在讨论、焦点落在哪、后续又出现了哪些新说法，都可以在这一页里顺着时间线读下去。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">查看今日看点
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#daily">阅读每日脉络</a>
+        </div>
+        <div class="hero-fact">
+          <div class="fact"><b>每日</b><span>内容更新节奏</span></div>
+          <div class="fact"><b>5</b><span>主题分区</span></div>
+          <div class="fact"><b>1</b><span>页面读完当日</span></div>
+        </div>
+      </div>
+      <aside class="hero-art" aria-label="今日内容速览">
+        <h2>今日速览</h2>
+        <ul class="tick-list">
+          <li><i>01</i><span>当日最集中的讨论点与相关说法，按先后顺序排列。</span></li>
+          <li><i>02</i><span>不同来源的表述差异，标注哪些是原话、哪些是转述。</span></li>
+          <li><i>03</i><span>热度尚未消退的话题，单独列出以便回看。</span></li>
+          <li><i>04</i><span>与寸止大赛每日大赛相关的高频提问集中解答。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TODAY / FEATURES -->
+  <section id="today">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">Today</p>
+        <h2 class="sec-title">今日看点：一天里值得先读的三件事</h2>
+        <p class="sec-desc">寸止大赛每日大赛的首页不追求罗列全部内容，而是先给出当天最值得留意的三个方向，其余细节留在各自分区里。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>焦点话题</h3>
+          <p>当天被反复提及的核心说法，先交代它从哪来、目前流传到哪一步，再补充与之相关的讨论。</p>
+          <p class="card-tag">关键词：寸止大赛每日大赛 · 热点焦点</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-7"/></svg>
+          </div>
+          <h3>热度走向</h3>
+          <p>用时间顺序说明一个话题如何在数小时内升温、扩散或降温，帮助读者判断它是否还值得跟进。</p>
+          <p class="card-tag">关键词：每日大赛 · 热度变化</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>说法对照</h3>
+          <p>把同一件事的不同版本并排呈现，指出差异出现在哪个环节，避免读者被单一表述带偏。</p>
+          <p class="card-tag">关键词：寸止大赛 · 说法对照</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTIONS -->
+  <section id="sections" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">Sections</p>
+        <h2 class="sec-title">五个分区，覆盖从发生到回看的全过程</h2>
+        <p class="sec-desc">寸止大赛每日大赛把内容按阅读用途划分，而不是按时间简单堆叠。每个分区回答一个不同的问题。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>① 今日发生</h3>
+          <p>记录当天新出现的说法、画面与讨论，保持原始表述，不做拔高。</p>
+        </article>
+        <article class="card">
+          <h3>② 焦点解析</h3>
+          <p>解释热点为什么被关注，涉及哪些相关方，以及它的关注点分布在哪里。</p>
+        </article>
+        <article class="card">
+          <h3>③ 说法对照</h3>
+          <p>同一事件的多版本表述并列，指出差异点与各自的出处。</p>
+        </article>
+        <article class="card">
+          <h3>④ 回看索引</h3>
+          <p>把此前几天仍有讨论度的话题汇总，方便连续阅读，而不必逐页翻找。</p>
+        </article>
+        <article class="card">
+          <h3>⑤ 读者提问</h3>
+          <p>集中回应访问者最常问的问题，包括内容范围、更新方式与使用方式。</p>
+        </article>
+        <article class="card" style="background:#fff7f3;border-color:#ffd3c2;">
+          <h3>阅读建议</h3>
+          <p>先读今日三件事建立框架，再按兴趣进入分区。寸止大赛每日大赛的内容价值在于前后对照，而非单条浏览。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY TIMELINE -->
+  <section id="daily" class="daily">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">Timeline</p>
+        <h2 class="sec-title">每日脉络：一天之内内容如何展开</h2>
+        <p class="sec-desc">以下时间点为内容整理顺序，用于说明寸止大赛每日大赛的更新节奏，不代表事件本身的发生时刻。</p>
+      </div>
+      <div class="daily-layout">
+        <ol class="timeline">
+          <li>
+            <time>上午 · 汇总</time>
+            <h4>整理前一日遗留话题</h4>
+            <p>把仍有讨论度的话题挑出，标注是否出现新说法，避免旧内容重复占据首页位置。</p>
+          </li>
+          <li>
+            <time>午间 · 更新</time>
+            <h4>补齐当天新增焦点</h4>
+            <p>寸止大赛每日大赛在这一时段更新今日看点，按讨论集中度排序，并给出对应分区的入口。</p>
+          </li>
+          <li>
+            <time>下午 · 对照</time>
+            <h4>处理说法差异</h4>
+            <p>当同一件事出现多个版本时，将差异部分单独列出，说明各自来源，让读者自行判断。</p>
+          </li>
+          <li>
+            <time>傍晚 · 收敛</time>
+            <h4>标记降温与升温</h4>
+            <p>对已趋于平缓的话题做出标注，对继续升温的话题保留在显眼位置，并补充后续进展。</p>
+          </li>
+          <li>
+            <time>夜间 · 归档</time>
+            <h4>进入回看索引</h4>
+            <p>当日内容整理进回看索引，形成可连续阅读的脉络，这也是每日大赛类页面最常被回访的部分。</p>
+          </li>
+        </ol>
+        <aside class="side-box">
+          <h3>高频分区入口</h3>
+          <div class="chip-row">
+            <a class="chip" href="#today">今日看点</a>
+            <a class="chip" href="#sections">焦点解析</a>
+            <a class="chip" href="#sections">说法对照</a>
+            <a class="chip" href="#daily">回看索引</a>
+            <a class="chip" href="#read">主题解读</a>
+            <a class="chip" href="#faq">读者提问</a>
+          </div>
+          <p class="side-note">寸止大赛每日大赛按使用场景组织内容：想快速了解当天发生了什么，从今日看点开始；想连续追踪，从回看索引进入。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- READ / ARTICLE -->
+  <section id="read">
+    <div class="wrap">
+      <div class="read">
+        <div>
+          <p class="sec-kicker">Reading</p>
+          <h2>为什么需要一个每日聚合页</h2>
+          <p>热点内容的特点是分散：同一天里，讨论可能出现在多个位置，表述也各不相同。逐条浏览既耗时，又容易只看片段。<strong>寸止大赛每日大赛</strong>把这些片段按用途重新组织，读者不必先知道去哪找，就能看到当天的主要内容走向。</p>
+          <p>聚合并不等于合并。页面对每条内容保留其原始表述的边界，哪些是当事人说法、哪些是转述、哪些只是讨论中的推测，都会在文字中区分清楚。这种区分让内容在热度退去之后仍然可读。</p>
+          <p>另一个考虑是节奏。热点在一天之内可能多次变化，若页面只呈现最终结果，读者会失去判断依据。因此寸止大赛每日大赛保留更新顺序，让前后差异本身成为信息的一部分。</p>
+          <p>对于习惯连续阅读的访问者，回看索引比当日列表更有用。它把仍有讨论度的话题汇集起来，形成一条可回溯的线索，这也是每日大赛类页面长期被使用的原因。</p>
+        </div>
+        <aside class="read-aside">
+          <h3>内容组织原则</h3>
+          <ul>
+            <li>先给框架，再给细节，避免首页被单一话题占满。</li>
+            <li>保留原始表述，转述与推测单独标注。</li>
+            <li>同一天内的变化按顺序呈现，不合并成结论。</li>
+            <li>降温话题不立即删除，转入回看索引。</li>
+            <li>读者提问集中回应，减少重复解释。</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">FAQ</p>
+        <h2 class="sec-title">读者常问的几个问题</h2>
+        <p class="sec-desc">关于寸止大赛每日大赛的内容范围与使用方式，集中回应如下。</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>寸止大赛每日大赛主要收录什么内容？</summary>
+          <p>收录当天流传较广的热点内容及其相关讨论，按焦点话题、热度走向、说法对照三类整理，并保留更新顺序与来源差异。</p>
+        </details>
+        <details>
+          <summary>页面多久更新一次？</summary>
+          <p>按每日节奏更新：上午汇总遗留话题，午间补齐新增焦点，下午处理说法差异，傍晚标记升降，夜间归档进入回看索引。具体内容以页面实际呈现为准。</p>
+        </details>
+        <details>
+          <summary>为什么同一件事会有多种表述？</summary>
+          <p>热点在传播中常有转述与再加工。页面把不同版本并列，指出差异出现在哪个环节，读者可以据此判断可信度，而不是只看到单一说法。</p>
+        </details>
+        <details>
+          <summary>如何连续跟进一个话题？</summary>
+          <p>从回看索引进入，同一话题在数日内的变化会按顺序排列。寸止大赛每日大赛不删除已降温内容，只会调整其位置。</p>
+        </details>
+        <details>
+          <summary>页面上的内容是否代表最终结论？</summary>
+          <p>不代表。页面呈现的是当时可获得的表述与讨论状态，并标注其性质。后续如有变化，会以新条目补充，而非直接改写旧内容。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <h2>从今日看点开始读</h2>
+          <p>寸止大赛每日大赛把当天的焦点、走向与说法差异放在同一页，先建立框架，再进入细节。也可先浏览回看索引，补上前几天的脉络。</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="#today">进入今日看点</a>
+          <a class="btn btn-ghost btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="background:#fff;color:#2f2547;">下载</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#ff5a36"/>
+          <circle cx="32" cy="32" r="15" fill="none" stroke="#fff" stroke-width="4"/>
+          <path d="M32 20v12l8 6" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span>寸止大赛每日大赛</span>
+      </div>
+      <nav class="footer-nav" aria-label="页尾导航">
+        <a href="#today">今日看点</a>
+        <a href="#sections">栏目分区</a>
+        <a href="#daily">每日脉络</a>
+        <a href="#read">主题解读</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>寸止大赛每日大赛 · 每日热点内容聚合页</span>
+      <span>内容按当日可获得的信息整理，具体表述以原文为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+                                        </html>
